@@ -21,7 +21,7 @@ module.exports = (req, res, next) => {
         }
       })
     } else {
-      throw new Error('invalid auth data');
+      throw new Error('invalid authentication data');
     }
   } catch (err) {
     res.status(401).json({ error: err.message });
